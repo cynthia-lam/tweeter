@@ -6,12 +6,12 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 0 1.5em;
 }
 
 .nav-logo {
   font-family: "bungee";  
   font-size: 2em;
-  margin: 1.5em 1.5em 1.5em 1.5em;
 }
 
 .nav-right-section{
@@ -19,7 +19,6 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 1.5em 1.5em 1.5em 1.5em;
 }
 
 .nav-new-tweet {
