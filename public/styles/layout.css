@@ -25,10 +25,10 @@ main {
   display: flex;
   justify-content: center;
   margin: 0 auto;
+  background-color: inherit;
 }
 
 .main-tweets {
-  background-color: #f4f1ec;
   width: 90%;
   display: flex;
   justify-content: center;
