@@ -22,6 +22,11 @@ body {
 }
 
 main {
+  display: flex;
+  justify-content: center;
+}
+
+.main-tweets {
   background-color: #f4f1ec;
   width: 90%;
   display: flex;
