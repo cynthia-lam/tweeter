@@ -14,7 +14,14 @@
   margin: 1.5em 1.5em 1.5em 1.5em;
 }
 
+.nav-right-section{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 1.5em 1.5em 1.5em 1.5em;
+}
+
 .nav-new-tweet {
   font-size: 1em;
-  margin: 1.5em 1.5em 1.5em 1.5em;
 }
