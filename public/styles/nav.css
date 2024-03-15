@@ -9,8 +9,11 @@
   padding: 0 1.5em;
 }
 
-.nav-logo {
-  font-family: "bungee";  
+nav span {
+  font-family: "bungee";
+}
+
+.nav-logo { 
   font-size: 2em;
 }
 
