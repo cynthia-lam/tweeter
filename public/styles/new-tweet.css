@@ -1,3 +1,7 @@
+.new-tweet-form {
+  width: 100%;
+}
+
 .new-tweet {
   width: 100%;
   display: flex;
