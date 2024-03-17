@@ -10,6 +10,11 @@
 
 #tweet-text {
   width: 100%;
+  border: none;
+  border-bottom: solid thick;
+  outline: none;
+  background-color: transparent;
+  resize: none;
 }
 
 .tweet-button {
