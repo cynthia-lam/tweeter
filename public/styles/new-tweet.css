@@ -6,6 +6,7 @@
 
 .counter {
   float: right;
+  font-family: "bungee";
 }
 
 #tweet-text {
