@@ -1,4 +1,21 @@
-.new-tweet{
+.new-tweet {
+  width: 100%;
   display: flex;
   justify-content: center;
+}
+
+.button-and-counter {
+  display: flex;
+  justify-content: space-between;
+}
+
+#tweet-text {
+  width: 100%;
+}
+
+.tweet-button {
+  background-color: #4056A1;
+  font-family: "bungee";
+  color: white;
+  border: none;
 }
