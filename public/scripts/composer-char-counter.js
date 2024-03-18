@@ -6,8 +6,8 @@ $(document).ready(function() {
   const textarea = document.querySelector("#tweet-text");
   console.log(textarea);
 
-  textarea.addEventListener("input", () => {
-    console.log("You inputted text into the textarea");
+  textarea.addEventListener("keypress", () => {
+    console.log("Detected keypress");
   });
 
 });
