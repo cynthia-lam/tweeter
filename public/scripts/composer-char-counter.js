@@ -3,13 +3,11 @@ console.log("Char-counter script is running!");
 $(document).ready(function() {
   console.log("DOM is ready!");
 
-  const textarea = document.querySelector("#tweet-text");
+  const textarea = $("#tweet-text");
   console.log(textarea);
 
-  textarea.addEventListener("keypress", () => {
+  textarea.on("keypress", () => {
     console.log("Detected keypress");
   });
 
 });
-
-
