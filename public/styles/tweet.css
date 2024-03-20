@@ -37,6 +37,6 @@
   display: flex;
   justify-content: space-between;
 }
-.icon:hover {
+.tweet-icon:hover {
   color: lavender;
 }
