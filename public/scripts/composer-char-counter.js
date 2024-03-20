@@ -17,11 +17,3 @@ $(document).ready(function() {
     }
   });
 });
-
-
-
-const onArticleClick = function() {
-  const dog = $(this).data("obj, dog")// attaches to each dog object, the originaly json obj
-  console.log(dog);  
-
-}
