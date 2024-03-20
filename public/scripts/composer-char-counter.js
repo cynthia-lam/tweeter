@@ -6,8 +6,16 @@ $(document).ready(function() {
   const textarea = $("#tweet-text");
   console.log(textarea);
 
-  textarea.on("keypress", () => {
-    console.log("Detected keypress");
+  textarea.on("input", function() {
+    const textLength = 140 - $(this).val().length;
+    $(".counter").text(textLength);
   });
-
 });
+
+
+
+const onArticleClick = function() {
+  const dog = $(this).data("obj, dog")// attaches to each dog object, the originaly json obj
+  console.log(dog);  
+
+}
