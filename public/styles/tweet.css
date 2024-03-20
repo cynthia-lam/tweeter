@@ -6,12 +6,12 @@
 }
 
 .tweet-container {
-  border-style: solid;
-  border: thick;
+  border: thick solid;
+  padding: 1em;
 }
 
 .tweet-container:hover {
-  box-shadow: inset;
+  box-shadow: 10px 5px 5px lavender;
 }
 
 .tweet-container header {
