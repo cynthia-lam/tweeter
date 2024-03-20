@@ -5,6 +5,15 @@
   flex-direction: column;
 }
 
+.tweet-container {
+  border-style: solid;
+  border: thick;
+}
+
+.tweet-container:hover {
+  box-shadow: inset;
+}
+
 .tweet-container header {
   display: flex;
   justify-content: space-between;
