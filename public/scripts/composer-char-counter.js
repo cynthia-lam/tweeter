@@ -11,9 +11,9 @@ $(document).ready(function() {
     $(".counter").text(textLength);
 
     if (textLength < 0) {
-      $(".counter").css("color", "red");
+      $(".counter").addClass("red");
     } else {
-      $(".counter").css("color", "#545149");
+      $(".counter").removeClass("red");
     }
   });
 });
