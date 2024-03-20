@@ -30,9 +30,9 @@ main {
   background-color: inherit;
 }
 
-.main-tweets {
+/* .published-tweets {
   width: 90%;
   display: flex;
   justify-content: center;
   flex-direction: column;
-}
+} */
