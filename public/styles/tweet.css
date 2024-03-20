@@ -30,4 +30,6 @@
 
 .tweet-container footer {
   font-size: medium;
+  display: flex;
+  justify-content: space-between;
 }
