@@ -1,0 +1,24 @@
+.published-tweets {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.tweet-container header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.tweet-container textarea {
+  width: 100%;
+  border: none;
+  border-bottom: solid thick;
+  outline: none;
+  background-color: transparent;
+  resize: none;
+}
+
+.tweet-container footer {
+  font-size: medium;
+}
