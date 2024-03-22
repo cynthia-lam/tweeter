@@ -68,7 +68,6 @@ $(document).ready(function() {
     event.preventDefault();
     const form = event.currentTarget; // target the form
     const serializedData = $(form).serialize();
-    console.log("this serialized: ", serializedData);
     console.log("serialized: ", serializedData);
 
     $.ajax({
@@ -77,7 +76,7 @@ $(document).ready(function() {
       data: serializedData,
       dataType: "json",
       success: function(receivedData) {
-        renderTweets(receivedData); // Call renderTweets with received data if needed
+        renderTweets(receivedData); // Call renderTweets with callback
       },
       error: function(xhr, status, error) {
         console.log(`Error - Status: ${status}, Error: ${error}`);
@@ -92,7 +91,7 @@ $(document).ready(function() {
       url: "/tweets",
       dataType: "json",
       success: function(receivedData) {
-        renderTweets(receivedData); // Call renderTweets with received data if needed
+        renderTweets(receivedData); // Call renderTweets with callback
       },
       error: function() {
         alert('Error with GET request');
