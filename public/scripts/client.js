@@ -64,6 +64,28 @@ $(document).ready(function() {
     }
   }
 
+  $('form').on('submit', (event) => {
+    event.preventDefault();
+    const form = event.currentTarget; // target the form
+    const serializedData = $(form).serialize();
+    console.log("this serialized: ", serializedData);
+    console.log("serialized: ", serializedData);
+
+    $.ajax({
+      type: "POST",
+      url: "/tweets",
+      data: serializedData,
+      dataType: "json",
+      success: function(receivedData) {
+        renderTweets(receivedData); // Call renderTweets with received data if needed
+      },
+      error: function() {
+        alert('Error with POST request');
+      }
+    });
+
+  })
+
   renderTweets(data);
 
 
