@@ -7,13 +7,15 @@ $(document).ready(function() {
   console.log(textarea);
 
   textarea.on('input', function() {
+    const counter = $('.button-and-counter').children('.counter');
+
     const textLength = 140 - $(this).val().length;
-    $('.counter').text(textLength);
+    counter.text(textLength);
 
     if (textLength < 0) {
-      $('.counter').addClass('red');
+      counter.addClass('red');
     } else {
-      $('.counter').removeClass('red');
+      counter.removeClass('red');
     }
   });
 });
