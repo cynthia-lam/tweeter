@@ -21,7 +21,8 @@ const data = [
     "user": {
       "name": "Descartes",
       "avatars": "https://i.imgur.com/nlhLi3I.png",
-      "handle": "@rd" },
+      "handle": "@rd"
+    },
     "content": {
       "text": "Je pense , donc je suis"
     },
@@ -33,28 +34,43 @@ $(document).ready(function() {
   console.log("Ready!");
 
   const createTweetElement = function(tweet) {
-    const $tweet = $(`<article class="tweet-container">${tweet.content.text}</article>`);
+    const $tweet = $(`<article class="tweet-content">
+    <header>
+      <div><i class="fa-regular fa-user"></i> ${tweet.content.text}</div> <!-- User icon -->
+      <div class="tweet-username"> ${tweet.content.text}</div>
+    </header>
+    <br>
+    <textarea>${tweet.content.text}</textarea>
+    <footer>
+      <div>${tweet.content.text}</div>
+      <div>
+        <i class="fa-solid fa-flag tweet-icon"></i>    <!-- Flag icon -->
+        <i class="fa-solid fa-retweet tweet-icon"></i> <!-- Retweet icon -->
+        <i class="fa-solid fa-heart tweet-icon"></i>   <!-- Heart icon -->
+      </div>
+    </footer>
+  </article>`);
     return $tweet;
   }
 
   const renderTweets = function(tweets) {
+    const tweetList = $(".tweet-container");
+    tweetList.empty();
+
     for (const tweet of tweets) {
-      const tweetsToAppend = createTweetElement(tweet);
-      $(".tweet-container").append(tweetsToAppend);
+      const tweetToAppend = createTweetElement(tweet);
+      tweetList.append(tweetToAppend);
     }
-    // calls createTweetElement for each tweet
-    // takes return value and appends it to the tweets container
-    
-    }
-    
+  }
+
   renderTweets(data);
 
-  
+
   // Test / driver code (temporary). Eventually will get this from the server.
-  const $tweet = createTweetElement(data);
-  
-  // Test / driver code (temporary)
-  console.log($tweet); // to see what it looks like
-  $('#tweets-container').append($tweet); // to add it to the page so we can make sure it's got all the right elements, classes, etc.
+  // const $tweet = createTweetElement(data);
+
+  // // Test / driver code (temporary)
+  // console.log($tweet); // to see what it looks like
+  // $('published-tweets').append($tweet); // to add it to the page so we can make sure it's got all the right elements, classes, etc.
 })
 
