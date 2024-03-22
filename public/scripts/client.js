@@ -36,20 +36,21 @@ $(document).ready(function() {
   const createTweetElement = function(tweet) {
     const $tweet = $(`<article class="tweet-content">
     <header>
-      <div><i class="fa-regular fa-user"></i> ${tweet.content.text}</div> <!-- User icon -->
-      <div class="tweet-username"> ${tweet.content.text}</div>
+      <div><i class="fa-regular fa-user"></i> ${tweet.user.name}</div> <!-- User icon -->
+      <div class="tweet-username"> ${tweet.user.handle}</div>
     </header>
     <br>
     <textarea>${tweet.content.text}</textarea>
     <footer>
-      <div>${tweet.content.text}</div>
+      <div>${tweet.created_at}</div>
       <div>
         <i class="fa-solid fa-flag tweet-icon"></i>    <!-- Flag icon -->
         <i class="fa-solid fa-retweet tweet-icon"></i> <!-- Retweet icon -->
         <i class="fa-solid fa-heart tweet-icon"></i>   <!-- Heart icon -->
       </div>
     </footer>
-  </article>`);
+  </article>
+  <br>`);
     return $tweet;
   }
 
