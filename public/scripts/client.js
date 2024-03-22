@@ -79,14 +79,29 @@ $(document).ready(function() {
       success: function(receivedData) {
         renderTweets(receivedData); // Call renderTweets with received data if needed
       },
-      error: function() {
-        alert('Error with POST request');
+      error: function(xhr, status, error) {
+        console.log(`Error - Status: ${status}, Error: ${error}`);
       }
     });
 
   })
 
+  const loadTweets = function() {
+    $.ajax({
+      type: "GET",
+      url: "/tweets",
+      dataType: "json",
+      success: function(receivedData) {
+        renderTweets(receivedData); // Call renderTweets with received data if needed
+      },
+      error: function() {
+        alert('Error with GET request');
+      }
+    });
+  }
+
   renderTweets(data);
+  loadTweets();
 
 
   // Test / driver code (temporary). Eventually will get this from the server.
