@@ -8,3 +8,7 @@
   background-color: #e09900;
   background-image: url("https://www.transparenttextures.com/patterns/vintage-speckles.png");
 }
+
+.header img {
+  margin-top: 130px;
+}
