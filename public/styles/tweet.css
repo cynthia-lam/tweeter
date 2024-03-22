@@ -5,16 +5,16 @@
   flex-direction: column;
 }
 
-.tweet-container {
+.tweet-content {
   border: thick solid;
   padding: 1em;
 }
 
-.tweet-container:hover {
+.tweet-content:hover {
   box-shadow: 10px 5px 5px lavender;
 }
 
-.tweet-container header {
+.tweet-content header {
   display: flex;
   justify-content: space-between;
 }
@@ -23,7 +23,7 @@
   color: rgb(192, 192, 192);
 }
 
-.tweet-container textarea {
+.tweet-content textarea {
   width: 100%;
   border: none;
   border-bottom: solid thick;
@@ -32,7 +32,7 @@
   resize: none;
 }
 
-.tweet-container footer {
+.tweet-content footer {
   font-size: medium;
   display: flex;
   justify-content: space-between;
