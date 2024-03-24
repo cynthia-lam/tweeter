@@ -4,6 +4,8 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
+// const { format } = require('../../node_modules/');
+
 const data = [
   {
     "user": {
@@ -42,7 +44,7 @@ $(document).ready(function() {
     <br>
     <textarea>${tweet.content.text}</textarea>
     <footer>
-      <div>${tweet.created_at}</div>
+      <div>${timeago.format(tweet.created_at)}</div>
       <div>
         <i class="fa-solid fa-flag tweet-icon"></i>    <!-- Flag icon -->
         <i class="fa-solid fa-retweet tweet-icon"></i> <!-- Retweet icon -->
@@ -74,22 +76,20 @@ $(document).ready(function() {
       type: "POST",
       url: "/tweets",
       data: serializedData,
-      dataType: "json",
-      success: function(receivedData) {
-        renderTweets(receivedData); // Call renderTweets with callback
-      },
-      error: function(xhr, status, error) {
+    })
+      .then(() => {
+        loadTweets();
+      })
+      .catch(function(xhr, status, error) {
         console.log(`Error - Status: ${status}, Error: ${error}`);
-      }
-    });
-
+      })
   })
 
   const loadTweets = function() {
     $.ajax({
       type: "GET",
       url: "/tweets",
-      dataType: "json",
+      // dataType: "json",  
       success: function(receivedData) {
         renderTweets(receivedData); // Call renderTweets with callback
       },
