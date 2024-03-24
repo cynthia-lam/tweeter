@@ -74,12 +74,12 @@ $(document).ready(function() {
 
     // validation here 
     const textarea = document.getElementById("tweet-text");
-    const tweetLength = textarea.value.length;
+    const tweet = textarea.value;
     
     // tweet is too long
-    if (tweetLength > 140) {
+    if (tweet.length > 140) {
       return alert("Tweet is too long!");
-    } else if (tweetLength === 0) {
+    } else if (tweet.trim().length === 0) {
       return alert("Can't send an empty tweet");
     }
 
