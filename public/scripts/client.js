@@ -66,6 +66,14 @@ $(document).ready(function() {
     }
   }
 
+  // GET
+  const loadTweets = function() {
+    $.get("/tweets")
+      .then((receivedData) => {
+        renderTweets(receivedData)
+      })
+  }
+
   $('form').on('submit', (event) => {
     event.preventDefault();
     const form = event.currentTarget; // target the form
@@ -100,25 +108,6 @@ $(document).ready(function() {
         console.log(`Error - Status: ${status}, Error: ${error}`);
       })
   })
-
-  // GET
-  const loadTweets = function() {
-    $.get("/tweets")
-      .then((receivedData) => {
-        renderTweets(receivedData)
-      })
-    // $.ajax({
-    //   type: "GET",
-    //   url: "/tweets",
-    //   // dataType: "json",  
-    //   success: function(receivedData) {
-    //     renderTweets(receivedData); // Call renderTweets with callback
-    //   },
-    //   error: function() {
-    //     alert('Error with GET request');
-    //   }
-    // });
-  }
 
   renderTweets(data);
   loadTweets();
