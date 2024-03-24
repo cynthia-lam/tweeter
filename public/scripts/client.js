@@ -70,16 +70,23 @@ $(document).ready(function() {
     event.preventDefault();
     const form = event.currentTarget; // target the form
     const serializedData = $(form).serialize();
-    form.reset();
     console.log("serialized: ", serializedData);
 
     // validation here 
-    // if (form.textarea.val)
-    // console.log(form.textarea.value);
+    const textarea = document.getElementById("tweet-text");
+    const tweetLength = textarea.value.length;
+    
     // tweet is too long
-    // tweet is empty
-    // note form should not be submitted or cleared
+    if (tweetLength > 140) {
+      return alert("Tweet is too long!");
+    } else if (tweetLength === 0) {
+      return alert("Can't send an empty tweet");
+    }
 
+    // if valid entry, reset the form:
+    form.reset();
+
+    // POST
     $.ajax({
       type: "POST",
       url: "/tweets",
@@ -93,6 +100,7 @@ $(document).ready(function() {
       })
   })
 
+  // GET
   const loadTweets = function() {
     $.get("/tweets")
       .then((receivedData) => {
