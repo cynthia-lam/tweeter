@@ -101,13 +101,5 @@ $(document).ready(function() {
 
   renderTweets(data);
   loadTweets();
-
-
-  // Test / driver code (temporary). Eventually will get this from the server.
-  // const $tweet = createTweetElement(data);
-
-  // // Test / driver code (temporary)
-  // console.log($tweet); // to see what it looks like
-  // $('published-tweets').append($tweet); // to add it to the page so we can make sure it's got all the right elements, classes, etc.
 })
 
