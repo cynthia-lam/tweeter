@@ -94,7 +94,7 @@ $(document).ready(function() {
     })
       .then(() => {
         $(".counter").text("140");
-        loadTweets();
+        loadTweets(); // this makes it so that the tweets show up without having to refresh the page
       })
       .catch(function(xhr, status, error) {
         console.log(`Error - Status: ${status}, Error: ${error}`);
