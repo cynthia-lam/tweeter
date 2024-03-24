@@ -93,6 +93,7 @@ $(document).ready(function() {
       data: serializedData,
     })
       .then(() => {
+        $(".counter").text("140");
         loadTweets();
       })
       .catch(function(xhr, status, error) {
