@@ -61,8 +61,8 @@ $(document).ready(function() {
     tweetList.empty();
 
     for (const tweet of tweets) {
-      const tweetToAppend = createTweetElement(tweet);
-      tweetList.append(tweetToAppend);
+      const newTweet = createTweetElement(tweet);
+      tweetList.append(newTweet);
     }
   }
 
@@ -70,7 +70,15 @@ $(document).ready(function() {
     event.preventDefault();
     const form = event.currentTarget; // target the form
     const serializedData = $(form).serialize();
+    form.reset();
     console.log("serialized: ", serializedData);
+
+    // validation here 
+    // if (form.textarea.val)
+    // console.log(form.textarea.value);
+    // tweet is too long
+    // tweet is empty
+    // note form should not be submitted or cleared
 
     $.ajax({
       type: "POST",
