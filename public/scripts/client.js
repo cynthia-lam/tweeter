@@ -86,9 +86,11 @@ $(document).ready(function() {
     
     // tweet is too long
     if (tweet.length > 140) {
-      return alert("Tweet is too long!");
+      // return alert("Tweet is too long!");
+      return $("#error-message-text").text("Tweet is too long!");
     } else if (tweet.trim().length === 0) {
-      return alert("Can't send an empty tweet");
+      return $("#error-message-text").text("Can't send an empty tweet");
+      // return alert("Can't send an empty tweet");
     }
 
     // if valid entry, reset the form:
