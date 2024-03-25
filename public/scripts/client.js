@@ -34,6 +34,7 @@ const data = [
 
 $(document).ready(function() {
   console.log("Ready!");
+  $(".error-message").hide();
 
   const createTweetElement = function(tweet) {
     const $tweet = $(`<article class="tweet-content">
@@ -76,6 +77,8 @@ $(document).ready(function() {
 
   $('form').on('submit', (event) => {
     event.preventDefault();
+    $(".error-message").hide();
+
     const form = event.currentTarget; // target the form
     const serializedData = $(form).serialize();
     console.log("serialized: ", serializedData);
@@ -86,15 +89,18 @@ $(document).ready(function() {
     
     // tweet is too long
     if (tweet.length > 140) {
-      // return alert("Tweet is too long!");
-      return $("#error-message-text").text("Tweet is too long!");
+      $("#error-message-text").text("Tweet is too long!").slideDown();
+      $(".error-message").slideDown();
+      return;
     } else if (tweet.trim().length === 0) {
-      return $("#error-message-text").text("Can't send an empty tweet");
-      // return alert("Can't send an empty tweet");
+      $("#error-message-text").text("Can't send an empty tweet");
+      $(".error-message").slideDown();
+      return;
     }
 
     // if valid entry, reset the form:
     form.reset();
+    $(".error-message").hide();
 
     // POST
     $.ajax({
