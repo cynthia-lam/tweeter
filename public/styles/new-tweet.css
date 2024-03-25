@@ -6,6 +6,7 @@
   width: 100%;
   display: flex;
   justify-content: center;
+  flex-direction: column;
 }
 
 .button-and-counter {
@@ -35,4 +36,13 @@
 
 .red {
   color: red
+}
+
+.error-message {
+  width: 100%;
+  border-style: solid;
+  border-width: thick;
+  border-color: red;
+  padding: .3em;
+  color: red;
 }
