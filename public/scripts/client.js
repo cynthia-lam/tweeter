@@ -62,7 +62,7 @@ $(document).ready(function() {
 
     for (const tweet of tweets) {
       const newTweet = createTweetElement(tweet);
-      tweetList.append(newTweet);
+      tweetList.prepend(newTweet);
     }
   }
 
