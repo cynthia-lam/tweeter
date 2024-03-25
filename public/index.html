@@ -80,6 +80,12 @@
   <!-- Page-specific (main) content here -->
   <main>
     <section class="new-tweet">
+      <!-- Error messages -->
+      <div>
+        <!-- icon -->
+        <i class="fa-solid fa-triangle-exclamation"></i>
+      </div>
+      <!-- Form for new tweet -->
       <form method="post" action="/tweets" class="new-tweet-form">
         <label for="tweet-text">What are you humming about?</label>
         <textarea name="text" id="tweet-text"></textarea>
@@ -90,7 +96,8 @@
       </form>
     </section>
     <br>
-    <section class="tweet-container">
+    <!-- Container for all posted tweets -->
+    <section class="tweet-container"> 
     </section>
   </main>
 
