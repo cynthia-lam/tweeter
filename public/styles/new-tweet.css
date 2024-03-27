@@ -40,7 +40,6 @@
 }
 
 .error-message {
-  display: none;
   width: 100%;
   border-style: solid;
   border-width: thick;
