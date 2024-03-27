@@ -7,7 +7,6 @@
   display: flex;
   justify-content: center;
   flex-direction: column;
-  margin-top: 150px;
 }
 
 .button-and-counter {
@@ -40,6 +39,7 @@
 }
 
 .error-message {
+  display: none;
   width: 100%;
   border-style: solid;
   border-width: thick;
