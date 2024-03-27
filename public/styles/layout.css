@@ -15,6 +15,9 @@ html {
  */
 
 body {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
   color: #545149;
   background-color: #f4f1ec;
   font-size: 24px;
@@ -26,7 +29,7 @@ main {
   width: 70%;
   flex-direction: column;
   justify-content: center;
-  margin: 0 auto;
+  margin: 35px;
   background-color: inherit;
 }
 
