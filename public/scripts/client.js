@@ -43,7 +43,7 @@ $(document).ready(function() {
       <div class="tweet-username"> ${tweet.user.handle}</div>
     </header>
     <br>
-    <textarea>${tweet.content.text}</textarea>
+    <textarea style="overflow:hidden">${tweet.content.text}</textarea>
     <footer>
       <div>${timeago.format(tweet.created_at)}</div>
       <div>
