@@ -33,7 +33,7 @@ nav span {
 }
 
 /* For desktop */
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 1024px) {
   .nav-bar{
     background-color: #4056A1;
   }
