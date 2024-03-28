@@ -44,6 +44,6 @@
 /* For desktop */
 @media only screen and (min-width: 768px) {
   .tweet-container {
-    margin: 1em;
+    margin: 0em 1em 1em 1em;
   }
   }
