@@ -2,7 +2,6 @@
   height: 120px;
   width: 100%;
   color: #FFFFFF;
-  background-color: #4056A1;
   position: fixed;
   display: flex;
   justify-content: space-between;
@@ -31,4 +30,11 @@ nav span {
 
 .fa-angles-down{
   color: #eb0a0a;
+}
+
+/* For desktop */
+@media only screen and (min-width: 768px) {
+  .nav-bar{
+    background-color: #4056A1;
+  }
 }
