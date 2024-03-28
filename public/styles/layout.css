@@ -30,9 +30,16 @@ main {
   background-color: inherit;
 }
 
-/* .published-tweets {
-  width: 90%;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-} */
+/* For desktop */
+@media only screen and (min-width: 768px) {
+  body {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  main {
+    margin: 1em;
+
+  }
+  }
