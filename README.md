@@ -6,13 +6,21 @@ This exercise was for us to further our knowledge in HTML, CSS, JS, Node, and Ex
 
 ## Final Product
 
-Caption1
+Here is the desktop version:
 
-!["Word"](link)
+!["Desktop Version"](https://github.com/cynthia-lam/tweeter/blob/master/docs/Tweeter%20Desktop.png)
 
-Caption1
+And the mobile version:
 
-!["Word"](link)
+!["Mobile Version"](https://github.com/cynthia-lam/tweeter/blob/master/docs/Tweeter%20Mobile.png)
+
+User cannot send empty tweets, or tweets with just whitespace, or they will receive this error:
+
+!["Empty Tweet"](https://github.com/cynthia-lam/tweeter/blob/master/docs/Tweeter%20Empty%20Tweet.png)
+
+Users cannot exceed the 140 character limit (even if they really, really cannot find their shoe):
+
+!["Over 140 Char Tweet"](https://github.com/cynthia-lam/tweeter/blob/master/docs/Tweeter%20Over%20140%20Char%20Tweet.png)
 
 ## Getting Started
 
