@@ -2,7 +2,7 @@
 
 Tweeter is a simple, single-page Twitter clone where users can create short posts of up to 140 characters. Posts are in chronological order, with the most recent posts appearing at the top of the page. Tweeter does this by fetching a list of posts from a simplified ‘server’ and allows users to add posts to this list dynamically.
 
-This exercise was for us to further our knowledge in HTML, CSS, JS, Node, and Express, while learning jQuery and AJAX for the first time!
+The purpose of this exercise was to further our knowledge in HTML, CSS, JS, Node, and Express, while learning jQuery and AJAX for the first time! I personally learned a lot about UI and responsive design, which actually ended up coming in handy during my day job - who would've thunk it!
 
 ## Final Product
 
